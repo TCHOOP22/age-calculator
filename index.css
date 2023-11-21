@@ -1,0 +1,286 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (inputs): 32px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400i, 700, 800i
+
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --purple:hsl(259, 100%, 65%)  ;
+    --light-red: hsl(0, 100%, 67%);
+
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+input{
+    font-size: 32px;
+
+}
+
+.x{
+    font-family: 'Poppins', sans-serif;
+
+
+    font-weight: 400;
+    font-style: italic;
+
+    font-weight: 700;
+
+    font-weight: 800;
+    font-style: italic;
+
+
+}
+body{
+    background-color: var(--off-white);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.container{
+    margin: 100px auto;
+    width: 500px;
+    min-height:500px ;
+
+    background-color: var(--white);
+    border-radius:  14px 14px 30% 14px;
+
+    padding: 3rem;
+
+}
+
+.container .inputs{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    box-sizing: border-box;
+}
+.container .inputs div{
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container .inputs input{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+    flex-shrink: 1;
+
+    max-width: 120px;
+    border-radius: 8px;
+    border: 1px solid var(--light-grey);
+    padding: 0.5rem;
+}
+
+
+.container .inputs label{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--smokey-grey);
+}
+
+.container .result{
+    padding-top: 2rem;
+    margin-top: 50px;
+    border-top: solid 1px var(--light-grey);
+    position: relative;
+}
+
+
+.container .result button{
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 34px;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    top: -40px;
+    cursor: pointer;
+}
+.container .result button:hover{
+    background-color: black;
+
+}
+.container .result h1{
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.container .result span{
+    color: var(--purple);
+    
+
+}
+
+
+
+
+
+/*//////////////////////////////////////////*/
+
+
+
+/* if inputs are empty   */
+.container .inputs h5{
+    font-size: 0.68rem;
+    font-style: italic;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.container .inputs.required label{
+    color: var(--light-red);
+
+}
+
+.container .inputs.required input{
+    border: 1px solid var(--light-red);
+}
+.container .inputs.required h5{
+    color: var(--light-red);
+
+}
+
+
+
+/*//////////////////////////////////////////*/
+
+@media screen and (max-width:500px) {
+
+    .container{
+        width: 100%;
+        min-height:500px ;
+    
+        background-color: var(--white);
+        border-radius:  14px 14px 30% 14px;
+    
+        padding: 1rem;
+    
+    }
+
+
+    .container .result button{
+        background-color: var(--purple);
+        color: var(--white);
+        font-size: 34px;
+        border: none;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        right: calc(50% - 40px);
+        top: -40px;
+    }
+
+    .container .inputs{
+
+        display: flex;
+        justify-content: space-around;
+        /* gap: 20px; */
+    }
+
+    .container .inputs input{
+        flex: 1;
+        font-size: 20px;
+
+        max-width: 80px;
+        border-radius: 8px;
+        border: 1px solid var(--light-grey);
+        padding: 0.5rem;
+    }
+
+    .container .result h1{
+        font-size: 3rem;
+    }
+    
+    
+}
+
+@media screen and (max-width:650px) and (min-width:501px){
+
+
+    .container{
+        margin: 100px auto;
+        width: 90%;
+        min-height:500px ;
+    
+        background-color: var(--white);
+        border-radius:  14px 14px 30% 14px;
+    
+        padding: 2rem;
+    
+    }
+
+
+    .container .result button{
+        background-color: var(--purple);
+        color: var(--white);
+        font-size: 34px;
+        border: none;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        right: calc(50% - 40px);
+        top: -40px;
+    }
+
+    .container .inputs{
+        display: flex;
+        gap: 20px;
+    }
+
+
+
+    
+}
+
+
+
