@@ -70,9 +70,21 @@ let calculAge =(year,month,days) =>{
     tm++;
     let td = thisYear.getUTCDate();   //current day
 
+    let currentDays = (ty*12*365) + (tm*365) + td ; 
+    let userDays = (Number(year)*12*365) + (Number(month)*365) + Number(days) ;
+
+
+    let lastDays = currentDays-userDays ;
+    console.log(lastDays);
 
 
 
+
+
+
+
+
+/*
     let userYear = ty-year ;
 
     let userMonth = tm-month ;
@@ -87,6 +99,9 @@ let calculAge =(year,month,days) =>{
 
         document.getElementById("months-output").innerHTML=userMonth;
         document.getElementById("days-output").innerHTML=userDay;
+*/
+
+
 
 
 
