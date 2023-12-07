@@ -2,77 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Age calculator app</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./index.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
-
-
   <div class="container">
     <div class="inputs">
       <div>
         <label for="day">DAY</label>
-        <input type="text" placeholder="DD" id="day" maxlength="2" value="22"/>
+        <input type="text" placeholder="DD" id="day" maxlength="2"/>
         <h5></h5>
       </div>
-
       <div>
         <label for="month">MONTH</label>
-      <input type="text" placeholder="MM" id="month" maxlength="2" value="2"/>
-      <h5></h5>
-
-    </div>
-
-
+        <input type="text" placeholder="MM" id="month" maxlength="2"/>
+        <h5></h5>
+      </div>
       <div>
         <label for="year">YEAR</label>
-      <input type="text" placeholder="YYYY" id="year" maxlength="4" value="2004"/>
-      <h5></h5>
-
+        <input type="text" placeholder="YYYY" id="year" maxlength="4"/>
+        <h5></h5>
+      </div>
     </div>
-
-
-    </div>
-
     <div class="result">
-      <button onclick="validation()" type="button"><i class="fa-solid fa-arrow-down" style="color: #ffffff;"></i></button>
-
+      <button onclick="validation()" type="button"><i class="fa-solid fa-arrow-down"></i></button>
       <h1><span id="year-output">--</span>years</h1>
       <h1><span id="months-output">--</span>months</h1>
-
-
       <h1><span id="days-output">--</span>days</h1>
-
-
-
     </div>
-
-
-
-
   </div>
-
-
-  
-<div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/TCHOOP22"  target="_blank">Mohammed Ali Boutaine</a>.
   </div>
-
-
   <script src="./app.js"></script>
 </body>
 </html>
