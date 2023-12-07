@@ -1,103 +1,81 @@
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    --purple:hsl(259, 100%, 65%)  ;
+:root {
+    --purple: hsl(259, 100%, 65%);
     --light-red: hsl(0, 100%, 67%);
-
     --white: hsl(0, 0%, 100%);
     --off-white: hsl(0, 0%, 94%);
     --light-grey: hsl(0, 0%, 86%);
     --smokey-grey: hsl(0, 1%, 44%);
     --off-black: hsl(0, 0%, 8%);
 }
-input{
+
+input {
     font-size: 32px;
-
 }
 
-.x{
+.x {
     font-family: 'Poppins', sans-serif;
-
-
-    font-weight: 400;
-    font-style: italic;
-
     font-weight: 700;
-
-    font-weight: 800;
     font-style: italic;
-
-
 }
-body{
+
+body {
     background-color: var(--off-white);
     font-family: 'Poppins', sans-serif;
-
 }
 
-
-.container{
+.container {
     margin: 100px auto;
     width: 500px;
-    min-height:500px ;
-
+    min-height: 500px;
     background-color: var(--white);
-    border-radius:  14px 14px 30% 14px;
-
+    border-radius: 14px 14px 30% 14px;
     padding: 3rem;
-
 }
 
-.container .inputs{
+.container .inputs {
     width: 100%;
     display: flex;
     gap: 30px;
     box-sizing: border-box;
 }
-.container .inputs div{
+
+.container .inputs div {
     flex-shrink: 1;
     display: flex;
     flex-direction: column;
-    
 }
 
-.container .inputs input{
+.container .inputs input {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-
     flex-shrink: 1;
-
     max-width: 120px;
     border-radius: 8px;
     border: 1px solid var(--light-grey);
     padding: 0.5rem;
 }
 
-
-.container .inputs label{
+.container .inputs label {
     font-size: 14px;
     font-weight: 400;
     color: var(--smokey-grey);
 }
 
-.container .result{
+.container .result {
     padding-top: 2rem;
     margin-top: 50px;
     border-top: solid 1px var(--light-grey);
     position: relative;
-}
-.container .result{
-color: white;
+    color: white;
 }
 
-
-.container .result button{
+.container .result button {
     background-color: var(--purple);
     color: var(--white);
     font-size: 34px;
@@ -110,24 +88,22 @@ color: white;
     top: -40px;
     cursor: pointer;
 }
-.container .result button:hover{
-    background-color: black;
 
+.container .result button:hover {
+    background-color: black;
 }
-.container .result h1{
+
+.container .result h1 {
     font-size: 4rem;
     font-style: italic;
     font-weight: 800;
 }
 
-.container .result span{
+.container .result span {
     color: var(--purple);
-    
-
 }
 
-
-.attribution{
+.attribution {
     display: flex;
     text-align: center;
     position: fixed;
@@ -140,50 +116,35 @@ color: white;
     justify-content: center;
 }
 
-
-/*//////////////////////////////////////////*/
-
-
-
-/* if inputs are empty   */
-.container .inputs h5{
+.container .inputs h5 {
     font-size: 0.68rem;
     font-style: italic;
     font-weight: 500;
     margin-left: 5px;
 }
-.container .inputs.required label{
-    color: var(--light-red);
 
+.container .inputs.required label {
+    color: var(--light-red);
 }
 
-.container .inputs.required input{
+.container .inputs.required input {
     border: 1px solid var(--light-red);
 }
-.container .inputs.required h5{
-    color: var(--light-red);
 
+.container .inputs.required h5 {
+    color: var(--light-red);
 }
 
-
-
-/*//////////////////////////////////////////*/
-
-@media screen and (max-width:500px) {
-
-    .container{
+@media screen and (max-width: 500px) {
+    .container {
         width: 100%;
-        min-height:500px ;
-    
+        min-height: 500px;
         background-color: var(--white);
-        border-radius:  14px 14px 30% 14px;
-    
+        border-radius: 14px 14px 30% 14px;
         padding: 1rem;
-    
     }
 
-
-    .container .result button{
+    .container .result button {
         background-color: var(--purple);
         color: var(--white);
         font-size: 34px;
@@ -196,47 +157,36 @@ color: white;
         top: -40px;
     }
 
-    .container .inputs{
-
+    .container .inputs {
         display: flex;
         justify-content: space-around;
-        /* gap: 20px; */
     }
 
-    .container .inputs input{
+    .container .inputs input {
         flex: 1;
         font-size: 20px;
-
         max-width: 80px;
         border-radius: 8px;
         border: 1px solid var(--light-grey);
         padding: 0.5rem;
     }
 
-    .container .result h1{
+    .container .result h1 {
         font-size: 3rem;
     }
-    
-    
 }
 
-@media screen and (max-width:650px) and (min-width:501px){
-
-
-    .container{
+@media screen and (max-width: 650px) and (min-width: 501px) {
+    .container {
         margin: 100px auto;
         width: 90%;
-        min-height:500px ;
-    
+        min-height: 500px;
         background-color: var(--white);
-        border-radius:  14px 14px 30% 14px;
-    
+        border-radius: 14px 14px 30% 14px;
         padding: 2rem;
-    
     }
 
-
-    .container .result button{
+    .container .result button {
         background-color: var(--purple);
         color: var(--white);
         font-size: 34px;
@@ -249,15 +199,8 @@ color: white;
         top: -40px;
     }
 
-    .container .inputs{
+    .container .inputs {
         display: flex;
         gap: 20px;
     }
-
-
-
-    
 }
-
-
-
