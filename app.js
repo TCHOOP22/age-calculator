@@ -57,60 +57,44 @@ let validation = () => {
   /* check if valid */
 
   if(isValid){
-    calculAge(year,month,days);
+    calculateAge(year,month,days);
   }
+};
+let calculateAge = (year, month, days) => {
+  let userDOB = new Date(`${year}-${month}-${days}`);
+  let currentTime = new Date();
+  
+  let ageInMilliseconds = currentTime - userDOB;
+
+  let ageDate = new Date(ageInMilliseconds);
+
+  let years = ageDate.getUTCFullYear() - 1970;
+  let months = ageDate.getUTCMonth();
+  let outdays = ageDate.getUTCDate() - 1;
+
+  document.getElementById("year-output").innerHTML = years;
+  document.getElementById("months-output").innerHTML = months;
+  document.getElementById("days-output").innerHTML = outdays;
 };
 
 
 
-let calculAge =(year,month,days) =>{
-    let thisYear = new Date();
-    let ty=thisYear.getFullYear();  // current year
-    let tm=thisYear.getUTCMonth();  // current month
-    tm++;
-    let td = thisYear.getUTCDate();   //current day
+// let calculateAge = (year, month, days) => {
+//   let userDOB = new Date(`${year}-${month}-${days}`);
+//   let currentTime = new Date();
+//   let timeDifference = currentTime - userDOB;
+  
+//   let daysInMilliSeconds = 86400000;
+//   let daysDifference = Math.floor(timeDifference / daysInMilliSeconds);
 
-    let currentDays = (ty*12*365) + (tm*365) + td ; 
-    let userDays = (Number(year)*12*365) + (Number(month)*365) + Number(days) ;
+//   let years = Math.floor(daysDifference / 365);
+//   let remainingDays = daysDifference % 365;
 
+//   let months = Math.floor(remainingDays / 30);
+//   let remainingDaysFromMonth = remainingDays % 30;
 
-    let lastDays = currentDays-userDays ;
-    console.log(lastDays);
+//   document.getElementById("year-output").innerHTML = years;
+//   document.getElementById("months-output").innerHTML = months;
+//   document.getElementById("days-output").innerHTML = remainingDaysFromMonth;
+// };
 
-
-
-
-
-
-
-
-/*
-    let userYear = ty-year ;
-
-    let userMonth = tm-month ;
-    let userDay = td-days ;
-
-    if(userMonth<0){userYear-- ; userMonth=12-month}
-    if(userDay<0){userMonth-- ; userDay=31+td -days}
-
-
-    document.getElementById("year-output").innerHTML=userYear;
-
-
-        document.getElementById("months-output").innerHTML=userMonth;
-        document.getElementById("days-output").innerHTML=userDay;
-*/
-
-
-
-
-
-
-    // let userDay = td-days ;
-    // if(userDay<0){  userDay=31-days; month-- }
-
-    // let userMonth = tm -month;
-
-    // console.log(userDay,userMonth);
-
-}
