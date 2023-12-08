@@ -72,9 +72,9 @@ let calculateAge = (year, month, days) => {
   let months = ageDate.getUTCMonth();
   let outdays = ageDate.getUTCDate() - 1;
 
-  document.getElementById("year-output").textContent = years+" ";
-  document.getElementById("months-output").textContent = months+" ";
-  document.getElementById("days-output").textContent = outdays+" ";
+  document.getElementById("year-output").textContent = years;
+  document.getElementById("months-output").textContent = months;
+  document.getElementById("days-output").textContent = outdays;
 };
 
 
