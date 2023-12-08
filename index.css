@@ -94,6 +94,7 @@ body {
 }
 
 .container .result h1 {
+    color:black;
     font-size: 4rem;
     font-style: italic;
     font-weight: 800;
